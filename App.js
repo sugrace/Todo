@@ -39,7 +39,7 @@ export default function App() {
           returnKeyType={"done"}
           autoCorrect={false}
         />
-        <ScrollView>
+        <ScrollView contentContainerStyle={styles.toDos}>
           <Todo/>
         </ScrollView>
       </View>
@@ -86,5 +86,8 @@ const styles = StyleSheet.create({
     borderBottomColor: "#bbb",
     borderBottomWidth: StyleSheet.hairlineWidth,
     fontSize: 25
+  },
+  toDos:{
+    alignItems: "center"
   }
 });
