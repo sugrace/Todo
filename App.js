@@ -32,7 +32,9 @@ export default function App() {
   const _loadToDos   = useCallback( async () => {
     try {
       const toDos = await AsyncStorage.getItem("toDos");
-      setToDos(JSON.parse(toDos));
+      if(toDos){
+        setToDos(JSON.parse(toDos));
+      }
       setLoadedToDos(true);
     } catch (error) {
       console.log(error)
